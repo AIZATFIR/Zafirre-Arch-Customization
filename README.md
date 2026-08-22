@@ -113,10 +113,3 @@ Zafirre-Arch-Customization/
 
 ---
 
-## 🔒 Jaminan Keamanan & Privasi (Privacy Guarantee)
-
-Repositori ini secara ketat **TIDAK menyertakan data sensitif atau pribadi**:
-- ❌ Tidak ada API key, token auth (`gh`, `hermes`), atau `.env`
-- ❌ Tidak ada private key SSH / GPG
-- ❌ Tidak ada riwayat terminal (`.fish_history`, `.bash_history`)
-- ❌ Tidak ada cache browser atau session data pribadi
