@@ -1,0 +1,22 @@
+# Sensitivity & Security Ignores
+*.key
+*.pem
+*.env
+*.token
+*.secret
+*.log
+*.sqlite
+*.db
+.DS_Store
+__pycache__/
+
+# History & Credentials
+.fish_history
+.bash_history
+.zsh_history
+*.authority
+.env.*
+
+# Caches & Temp
+node_modules/
+target/

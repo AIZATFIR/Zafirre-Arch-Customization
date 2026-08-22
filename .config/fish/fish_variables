@@ -1,0 +1,8 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export ANDROID_HOME:/home/aizatfir/Android/Sdk
+SETUVAR --export CHROME_EXECUTABLE:/usr/bin/chromium
+SETUVAR --export JAVA_HOME:/usr/lib/jvm/java\x2d21\x2dopenjdk
+SETUVAR __fish_initialized:4300
+SETUVAR fish_greeting:
+SETUVAR fish_user_paths:/home/aizatfir/\x2elocal/bin\x1e/home/aizatfir/flutter/bin\x1e/home/aizatfir/\x2eopencode/bin\x1e/usr/lib/ccache/bin/\x1e/home/aizatfir/\x2ecargo/bin/\x1e/home/aizatfir/\x2elocal/bin/

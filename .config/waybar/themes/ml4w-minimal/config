@@ -1,0 +1,120 @@
+{
+    // General Settings
+    "layer": "top",
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 0,
+    "height": 30,
+    // Load Modules
+    "include": [
+        "~/.config/ml4w/settings/waybar-quicklinks.json",
+        "~/.config/waybar/modules.json"
+    ],
+    // Workspaces: app icons + small workspace number
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace r-1",
+        "on-scroll-down": "hyprctl dispatch workspace r+1",
+        "on-click": "activate",
+        "active-only": false,
+        "all-outputs": true,
+        "format": "{windows} {icon}",
+        "format-icons": {
+            "1": "₁",
+            "2": "₂",
+            "3": "₃",
+            "4": "₄",
+            "5": "₅",
+            "6": "₆",
+            "7": "₇",
+            "8": "₈",
+            "9": "₉",
+            "10": "₁₀"
+        },
+        "format-window-separator": " ",
+        "window-rewrite-default": "󰣆",
+        "window-rewrite": {
+            "class<brave-browser>": "󰖟",
+            "class<vivaldi.*>": "󰖟",
+            "class<firefox.*>": "󰈹",
+            "class<kitty>": "󰆍",
+            "class<[Aa]lacritty>": "󰆍",
+            "class<code.*>": "󰨞",
+            "class<jetbrains-studio>": "󰀴",
+            "class<elecwhat>": "󰖣",
+            "class<org.telegram.desktop>": "",
+            "class<discord.*>": "󰙯",
+            "class<spotify>": "",
+            "class<[Ss]team>": "󰓓",
+            "class<vlc>": "󰕼",
+            "class<com.obsproject.Studio>": "󰕧",
+            "class<org.qbittorrent.qBittorrent>": "󰇚",
+            "class<anki>": "󰘸"
+        },
+        "persistent-workspaces": {
+            "*": 1
+        }
+    },
+    // Updates Count
+    "custom/updates": {
+        "format": "   {}",
+        "escape": true,
+        "return-type": "json",
+        "exec": "~/.config/ml4w/scripts/updates.sh",
+        "restart-interval": 60,
+        "on-click": "$(cat ~/.config/ml4w/settings/terminal.sh) --class dotfiles-floating -e ~/.config/ml4w/scripts/installupdates.sh",
+        "on-click-right": "~/.config/ml4w/settings/software.sh"
+    },
+    // Pulseaudio
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon}   {volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [
+                " ",
+                " ",
+                " "
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    // Modules Left
+    "modules-left": [
+        "custom/appmenuicon",
+        "hyprland/workspaces",
+        //"group/quicklinks",
+        "custom/empty"
+    ],
+    // Modules Center
+    "modules-center": [
+        "hyprland/window",
+        "custom/empty"
+    ],
+    // Modules Right    
+    "modules-right": [
+        "custom/updates",
+        "pulseaudio",
+        //"backlight",
+        "bluetooth",
+        //"network",
+        "battery",
+        "power-profiles-daemon",
+        "group/hardware",
+        "group/tools",
+        "custom/exit",
+        "clock",
+        "tray",
+        "custom/notification"
+    ]
+}
