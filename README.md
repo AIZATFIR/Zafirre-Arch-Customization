@@ -13,7 +13,7 @@
 
 ## 📖 Apa Itu Zafirre Arch Customization?
 
-**Zafirre Arch Customization** adalah repositori dotfiles & sistem kustomisasi Arch Linux + Hyprland yang dirancang secara menyeluruh dan personal. Berbeda dengan dotfiles umum, repositori ini menyatukan alur kerja nyata seorang software engineer: dari tampilan visual modern, integrasi AI Agent (AGY CLI / Hermes / IDE), pintasan terminal Kitty, hingga otomatisasi booting & wallpaper.
+**Zafirre Arch Customization** adalah repositori dotfiles & sistem kustomisasi Arch Linux + Hyprland yang dirancang secara menyeluruh dan personal. Repositori ini secara **otomatis memasang Hyprland**, Waybar, Kitty, Fish shell, seluruh dependensi, dan kustomisasi visual dari awal pada instalasi Arch Linux baru.
 
 ---
 
@@ -70,7 +70,7 @@
 
 ## 🚀 Panduan Instalasi 1-Click (Restore di Computer/Device Baru)
 
-Jika kamu berpindah device atau menginstal ulang Arch Linux dari awal, jalankan 3 langkah berikut untuk mengembalikan seluruh sistem & tampilan secara persis:
+Jika kamu berpindah device atau menginstal ulang Arch Linux minimalis dari awal, jalankan 3 langkah ini. Installer akan **otomatis mengunduh & menginstall Hyprland, Waybar, Kitty, Fish, yay, seluruh paket AUR, wallpaper, dan konfigurasi**:
 
 ```bash
 # 1. Clone repositori ke home directory
@@ -104,8 +104,9 @@ Zafirre-Arch-Customization/
 ├── .local/
 │   └── bin/                  # Custom bash/python helper scripts
 ├── wallpapers/               # Koleksi wallpaper lengkap (~/Downloads/Wallpaper)
-├── pkglist.txt               # Daftar seluruh paket resmi pacman (1-click restore)
-├── install.sh                # Script installer otomatis
+├── pkglist.txt               # Paket resmi pacman (Hyprland, Waybar, Kitty, dll)
+├── aurpkglist.txt            # Paket AUR (yay, animfetch, waypaper, wlogout, dll)
+├── install.sh                # Script installer otomatis 1-click
 ├── README.md                 # Dokumentasi lengkap repositori
 └── .gitignore                # Filter keamanan data sensitif & log
 ```
